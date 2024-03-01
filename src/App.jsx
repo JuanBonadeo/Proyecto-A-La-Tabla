@@ -13,7 +13,7 @@ function App() {
     <div className='App'>
     <BrowserRouter>
       
-        <Header/>
+        <Header/> 
         <Routes>
           <Route path="/" element={<HomeView/>}/>
         </Routes>  

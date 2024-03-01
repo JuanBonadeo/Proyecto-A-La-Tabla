@@ -1,0 +1,56 @@
+.carrito{
+    display: flex;
+    height: 2em;
+    background-color: #00000000;
+    border: none;
+    
+}.carrito:hover{
+    scale: 1.1;
+}
+.carritoCounter{
+    border: none;
+    color: #ffffff;
+    position: relative;
+    top: 12px;
+    left: 25px;
+}
+.carrito svg{
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+}
+
+
+.productCardContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+    margin-bottom: 2em;
+}
+.imgProduct{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.cardInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    padding-top: .3em;
+}
+.namePrice h4{
+    margin: 0 0;
+    font-size: 1em;
+    
+}
+.namePrice{
+    display: flex;
+    flex-direction: column;
+    gap: .3em;
+    padding: .3em;
+}

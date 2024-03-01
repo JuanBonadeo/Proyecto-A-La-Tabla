@@ -1,7 +1,7 @@
 .carrito{
     display: flex;
     height: 2em;
-    padding: 4px 6px;
+    margin-bottom: 10px;
     background-color: #00000000;
     border: none;
     

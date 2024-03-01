@@ -25,6 +25,7 @@ const Footer = () => {
                 <LinkedInIcon/>
             </div>
             <h5>©ALATABLA Copyright  todos los derechos reservados</h5>
+            <h5>Develop by:   <a>JuanBonadeo</a></h5>
 
             
         </footer>

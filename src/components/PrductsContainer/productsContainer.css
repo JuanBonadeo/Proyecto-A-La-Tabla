@@ -1,0 +1,20 @@
+.productsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3em auto;
+    width: 90%;
+    color: azure;
+}.productsContainer h2{
+    border-bottom: 1px solid #e3e3e3;
+}
+.ProductList{
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}

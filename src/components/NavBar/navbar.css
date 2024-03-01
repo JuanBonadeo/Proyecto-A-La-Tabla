@@ -16,10 +16,12 @@
     text-decoration: none;
     color: #DDA30E;
 }
+.mobileContainerNavRight{
+    display: none;
+
+}
 @media (max-width: 1200px){
-    .title{
-        display: none;
-    }.mobileContainerNav{
+.mobileContainerNav{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,8 +30,15 @@
         display: flex;
         gap: 10px;
         align-items: center;
+        justify-content: center;
+        margin: 0;
     }
-    
+    .desktopContainerNavRight{
+        display: none;
+    }
+    .navLinks a{
+        margin: 0 auto;
+    }
 }
 
 

@@ -1,37 +1,33 @@
 .Hero1Container{
     height: 90vh;
+    width: 100%;
+}
+.HeroCaption{
+    display: flex;
+    flex-direction: column;
+    gap: 2em
 }
 .HeroCaption h3{
     font-size: 3em;
     color: #e3e3e3;
     margin-left: -10em;
     margin-bottom: 0em;
-}.HeroCaption1 h3{
+}.HeroCaption h3{
     font-size: 3em;
     color: #e3e3e3;
     margin-left: 0em;
     margin-bottom: 0em;
-}.HeroCaption2 button{
-    margin-bottom: 13em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    outline: none;
-    text-decoration: none;
 }
 .imgHero1{
     object-fit: contain;
     object-position: center;
     height: max-content;
     width: 100%;
+    filter:contrast(0.8);
+    filter: brightness(0.8);
 }
-.fix-image {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-@media (max-width: 1100px ){
+
+@media (max-width: 1200px ){
 
     .HeroCaption h3{
         font-size: 2em;
@@ -43,13 +39,15 @@
 }
 @media (max-width: 680px ){
     .Hero1Container{
-        height: fit-content;
+        height: 80vh
     }
     .HeroCaption h3{
-        font-size: 1.3em;
+        font-size: 1em;
         color: #e3e3e3;
         margin-left: 0em;
         margin-bottom: 0em;
+    }.slide .carousel-control-prev,.slide .carousel-control-next{
+        display: none;
     }
 
 }
