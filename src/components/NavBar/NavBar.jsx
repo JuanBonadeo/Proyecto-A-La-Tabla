@@ -22,7 +22,7 @@ function Header() {
             <Nav.Link className="primary"href="/">Inicio</Nav.Link>
             <Nav.Link className="primary"href="/tienda">Tienda</Nav.Link>
             <Nav.Link className="primary"href="/contacto">Contacto</Nav.Link>
-            <Nav.Link className="primary"href="/quienesSomos">Quienes Somos</Nav.Link>
+            <Nav.Link className="primary"href="/quienes">Quienes Somos</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <div className="desktopContainerNavRight">

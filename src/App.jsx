@@ -4,6 +4,7 @@ import './App.css'
 import Header from './components/NavBar/NavBar'
 import HomeView from './components/HomeView/HomeView'
 import Footer from './components/Footer/Footer'
+import ProductInfo from './components/ProductInfo/ProductInfo'
 
 
 
@@ -16,6 +17,7 @@ function App() {
         <Header/> 
         <Routes>
           <Route path="/" element={<HomeView/>}/>
+            
         </Routes>  
         <Footer/>
     </BrowserRouter>

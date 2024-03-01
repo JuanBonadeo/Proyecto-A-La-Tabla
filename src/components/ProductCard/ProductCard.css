@@ -34,6 +34,11 @@
     width: 100%;
     object-fit: cover;
     object-position: center;
+    transition: all .3s;
+    min-height: 360px;
+}.imgProduct:hover{
+    scale: 1.015;
+    filter: drop-shadow(0 0 1px #f2c202);
 }
 .cardInfo{
     display: flex;
@@ -53,4 +58,24 @@
     flex-direction: column;
     gap: .3em;
     padding: .3em;
+}
+
+@media screen and (max-width: 768px) {
+    .productCardContainer{
+        width: 100%;
+        height: 100%;
+    }
+    .imgProduct{
+        min-height: 100%;
+    }
+    .namePrice{
+        margin-top: .3em;
+    }
+    .namePrice h4{
+        font-size: 1.2em;
+    }.namePrice span{
+        font-size: 1em;
+    }
+    
+    
 }
