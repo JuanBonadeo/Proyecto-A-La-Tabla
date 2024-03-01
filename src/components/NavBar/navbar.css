@@ -1,8 +1,9 @@
+
 .navBar{
-    max-width: 1400px;
     background-color: black;
     display: flex;
     margin: 0;
+    position: fixed;
 }
 .mobileContainerNav .title{
     font-size: 2em;

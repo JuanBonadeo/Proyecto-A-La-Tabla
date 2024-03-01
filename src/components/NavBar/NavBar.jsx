@@ -9,7 +9,7 @@ import Cart from '../Cart/Cart';
 
 function Header() {
   return (
-    <Navbar expand="xl" className="navBar dark" data-bs-theme="dark">
+    <Navbar expand="xl" className="navBar dark fixed-top" data-bs-theme="dark">
       <Container className='mobileContainerNav'>
         <Logo/>
         <div className="mobileContainerNavRight">
