@@ -1,0 +1,28 @@
+.Button{
+    width: 160px;
+    height: 50px;
+    background-color: #DDA30E; 
+    color: #000000;
+    border: none;
+    padding: .5em 1em;
+    font-size: 1.2em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    }
+.Button:hover{ 
+    background-color: #bc8700;
+    scale: 1.005;
+    border-color: #000000;
+    transition: 0.3s; 
+   }
+@media (max-width: 1100px ){
+    .Button{
+        height: 1.8em; 
+        padding: 0em .5em; 
+        }
+   }
+
+

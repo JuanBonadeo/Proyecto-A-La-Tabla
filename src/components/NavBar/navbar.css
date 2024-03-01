@@ -1,0 +1,37 @@
+.navBar{
+    max-width: 1400px;
+    background-color: black;
+    display: flex;
+    margin: 0;
+}
+.mobileContainerNav .title{
+    font-size: 2em;
+}
+.navLinks{
+    display: flex;
+    gap: 20px;
+    color: #DDA30E;
+}
+.navLinks a{
+    text-decoration: none;
+    color: #DDA30E;
+}
+@media (max-width: 1200px){
+    .title{
+        display: none;
+    }.mobileContainerNav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }.mobileContainerNavRight{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    
+}
+
+
+
+

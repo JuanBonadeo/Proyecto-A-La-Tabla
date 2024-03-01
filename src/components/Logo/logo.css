@@ -1,0 +1,5 @@
+.logo {
+    height: 100px;
+    padding: 0;
+    will-change: filter;
+}
