@@ -1,0 +1,21 @@
+.carrito{
+    display: flex;
+    height: 2em;
+    background-color: #00000000;
+    border: none;
+    
+}.carrito:hover{
+    scale: 1.1;
+}
+.carritoCounter{
+    border: none;
+    color: #ffffff;
+    position: relative;
+    top: 12px;
+    left: 25px;
+}
+.carrito svg{
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+}

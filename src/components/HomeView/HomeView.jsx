@@ -1,15 +1,13 @@
-import Hero0 from "../Hero2/Hero2.jsx"
+import Hero2 from "../Hero2/Hero2.jsx"
 import Hero1 from "../Hero1/Hero1.jsx"
-import ProductsContainer from "../PrductsContainer/ProductsContainer.jsx"
-import ProductInfo from "../ProductInfo/ProductInfo.jsx"
+import ProductsContainer from "../ProductsContainer/ProductsContainer.jsx"
 
 const HomeView = () => {
     return (
         <>
-            <Hero0/>
+            <Hero2/>
             <Hero1/>  
             <ProductsContainer/>
-            <ProductInfo/>
         </>
     )
 }

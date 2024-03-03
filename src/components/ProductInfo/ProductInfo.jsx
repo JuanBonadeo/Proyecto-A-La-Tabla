@@ -1,34 +1,47 @@
 import React from 'react'
+import { useEffect } from 'react'
 import './productInfo.css'
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import Button from '../Button/Button';
+import ProductCard from '../ProductCard/ProductCard'
 
-export default function ProductInfo() {
+
+
+export default function ProductInfo({id, nombre, precio, img1,img2,img3, descripcion }) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
+    <>
     <div className='productInfoContainer'>
-      <img src='image2.jpeg' alt='product'className='infoImg'/>
+      <img src={img1} alt='product'className='infoImg'/>
       <div className="information">
-        <h1>Product Name</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita ea voluptatem error nobis. Vitae iure possimus quis sapiente eveniet alias voluptate, eum assumenda est mollitia! Debitis quam aspernatur fuga ut?</p>
+        <h2>{nombre}</h2>
+        <p>{descripcion}</p>
         <div className="priceAddto">
-          <p>Price: 100.000$</p>
+          <p>Precio: {precio}$</p>
           <Button label='Agregar al Carrito'/>
         </div>
         <div className="infoPayment">
           <p>Metodos de Pago</p>
           <div className="paymentMethods">
-            <img src='visa.png' alt='Mercado Pago'/>
             <img src='mastercard.png' alt='Mastercard'/>
             <img src='paypal.png' alt='paypal'/>
           </div>
         </div>
         <div className="envios">Envios a Todo el Pais <LocalShippingIcon/></div>
       </div>
-      
-      
-    
-    
     </div>
+    <div className="otherProductsContainer">
+      <h2>Productos Relacionados</h2>
+      <div className="otherProducts">
+        <ProductCard name="Juego de 20 tablas"img="image0.jpeg"/>
+        <ProductCard name="Juego de 20 tablas"img="image6.jpeg"/>
+        <ProductCard name="Juego de 20 tablas"img="image7.jpeg"/>
+      </div>
+    </div>
+    </>
+    
   )
 }

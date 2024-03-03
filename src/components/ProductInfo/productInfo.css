@@ -6,9 +6,9 @@
     grid-template-columns: 2fr 1fr;
     color: azure;
     border-top: 1px solid #fff;
-    
-    
+    margin-top: 6.5em;
 }
+
 .productInfoContainer .infoImg{
     width: 100%;
     height: 100%;
@@ -20,6 +20,7 @@
     
 }
 .productInfoContainer .information{
+    color: azure;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
@@ -52,6 +53,31 @@
     align-items: center;
     margin: auto 0;
 }
+/* OTHER PRODUCTS */
+.otherProductsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 1em auto;
+    padding: 1em;
+    color: #fff;
+    width: 90vw;
+
+}
+.otherProducts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    color: #fff;
+}
+
+
+
+
 @media (max-width: 1100px){
     .productInfoContainer{
         display: flex;
@@ -78,6 +104,9 @@
         flex-direction: column;
         align-items: center;
         gap: 1em;
+    }
+    .otherProducts :nth-child(3){
+        display: none;
     }
     
 }

@@ -4,6 +4,7 @@
     display: flex;
     margin: 0;
     position: fixed;
+    
 }
 .mobileContainerNav .title{
     font-size: 2em;

@@ -1,21 +1,31 @@
-import React from 'react'
-import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import React, { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ProductCard.css'
+import { CartContext } from '../../context/CartContext';
+import AddToCartIcon from '../AddtoCartIcon.js/AddToCartIcon';
 
-export default function ProductCard(prop) {
+export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
+  const useCart = () => {
+    return useContext(CartContext)
+  }
+  const { addItem, quantity } = useCart();
+  const handleOnAdd = (quantity) => {
+    const productToAdd = {
+        id, nombre, precio, quantity,img1,img2,img3
+    }
+    addItem(productToAdd)
+    
+} 
   return (
     <div className='productCardContainer'>
-      <img to={prop.id} src={prop.img} alt='product' className='imgProduct'/>
+      <Link to={`/producto/${id}`}><img src={img1} alt='product' className='imgProduct'/></Link>
       <div className="cardInfo">
         <div className="namePrice">
-          <h4>{prop.name}</h4>
-          <span>$100.000</span>
+          <h4>{nombre}</h4>
+          <span>${precio}</span>
         </div>
         
-        <button className={`carrito `}>
-                <p className='carritoCounter'>+</p>
-                <ShoppingBagOutlinedIcon fontSize='large' color='info'/>   
-        </button>
+          <AddToCartIcon onAdd={handleOnAdd}/>
       </div>
       
     </div>

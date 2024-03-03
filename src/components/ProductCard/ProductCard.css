@@ -1,25 +1,3 @@
-.carrito{
-    display: flex;
-    height: 2em;
-    background-color: #00000000;
-    border: none;
-    
-}.carrito:hover{
-    scale: 1.1;
-}
-.carritoCounter{
-    border: none;
-    color: #ffffff;
-    position: relative;
-    top: 12px;
-    left: 25px;
-}
-.carrito svg{
-    color: #ffffff;
-    width: 40px;
-    height: 40px;
-}
-
 
 .productCardContainer{
     display: flex;
@@ -36,6 +14,7 @@
     object-position: center;
     transition: all .3s;
     min-height: 360px;
+    cursor: pointer;
 }.imgProduct:hover{
     scale: 1.015;
     filter: drop-shadow(0 0 1px #f2c202);

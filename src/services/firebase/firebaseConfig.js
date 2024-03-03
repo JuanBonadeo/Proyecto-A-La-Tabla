@@ -1,14 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
+
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_apiKey,
-  authDomain: process.env.REACT_APP_authDomain,
-  projectId: process.env.REACT_APP_projectId,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderId,
-  appId: process.env.REACT_APP_appId
+  apiKey: "AIzaSyA-ZwkHaGyIUMjqsdO6_Vf5IlMZTK782ZE",
+  authDomain: "alatabla-6a973.firebaseapp.com",
+  projectId: "alatabla-6a973",
+  storageBucket: "alatabla-6a973.appspot.com",
+  messagingSenderId: "1014932528464",
+  appId: "1:1014932528464:web:70a3cfc5d9f90dbd776055"
 };
+
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
