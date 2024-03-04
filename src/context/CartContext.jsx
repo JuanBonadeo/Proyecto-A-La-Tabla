@@ -1,5 +1,6 @@
 import { createContext, useState, useContext, useEffect } from 'react';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'
+
 
 export const CartContext = createContext([])
  export const Toast = Swal.mixin({
@@ -8,6 +9,7 @@ export const CartContext = createContext([])
   showConfirmButton: false,
   timer: 2000,
   timerProgressBar: true,
+  theme: 'dark',
   didOpen: (toast) => {
     toast.addEventListener('mouseenter', Swal.stopTimer)
     toast.addEventListener('mouseleave', Swal.resumeTimer)
@@ -92,6 +94,7 @@ export const CartProvider = ({ children }) => {
           title: 'Deseas de borrar el carrito?',
           showCancelButton: true,
           confirmButtonText: 'Limpiar',
+          cancelButtonText: 'Cancelar',
         }).then((result) => {
           if (result.isConfirmed) {
             Toast.fire('',"carrito limpio", 'info')

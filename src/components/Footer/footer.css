@@ -18,9 +18,12 @@ footer{
 }.footer1 div a{
     color: #ffffff;
     text-decoration: none;
+    cursor: pointer;
+    user-select: none;
 }.footer1 div a:hover{
-    color: #ffffff;
-    scale: 1.01;
+    color: #FE9426;
+    scale: 1.05;
+    transition: .3s;
 }
 .footer2{
     display: flex;
@@ -30,6 +33,7 @@ footer{
     gap: 3em;
     padding: 2em 0;
     color: #ffffff;
+    
 }
 footer h5{
     display: flex;
@@ -41,8 +45,12 @@ footer h5{
 .footer2 svg{
     width: 30px;
     height: 30px;
-    color: #ffffff;
-
+    color: azure;
+    cursor: pointer;
+}.footer2 svg:hover{
+    scale: 1.1;
+    transition: .3s;
+    color: #FE9426;
 }
 
 

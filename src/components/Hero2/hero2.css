@@ -9,20 +9,22 @@
 }
 .title{
     font-size: 5em;
-    font-weight: 700;
-    color: rgb(224, 158, 2);
+    
+    color: #FE9426;
     text-align: center;
     margin-bottom: 1rem;
     z-index: 1;
     text-transform: uppercase;
+    font-variant: small-caps;
 }
 .subtitle{
     font-size: 2em;
     font-weight: 500;
-    color: #fff;
+    color: azure;
     text-align: center;
     margin-bottom: 1rem;
     z-index: 1;
+    font-variant: small-caps;
 }
 .hero0Container img{
     width: 100%;
@@ -32,5 +34,32 @@
     top: 0;
     left: 0;
     z-index: 0,4;
-    filter: blur(3px)opacity(0.9)contrast(1.2)brightness(0.6)drop-shadow(0 0 0.5rem #f6e102);
+    filter: blur(1px)opacity(0.9)contrast(1.2)brightness(0.6)drop-shadow(0 0 0.5rem #f6e102);
+}
+
+@media screen and (max-width: 768px) {
+    .title{
+        font-size: 3em;
+    }
+    .subtitle{
+        font-size: 1.5em;
+    }
+    .hero0Container{
+        height: 80vh;
+        margin-top: 6.5em;
+       
+        
+    }
+    
+}
+
+@media screen and (max-width: 450px) {
+    .title{
+        font-size: 2em;
+    }
+    .subtitle{
+        font-size: 1.2em;
+    }
+    
+    
 }

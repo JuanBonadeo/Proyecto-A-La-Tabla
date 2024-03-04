@@ -19,10 +19,10 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer2'>
-                <InstagramIcon />
-                <FacebookIcon/>
-                <GitHubIcon/>
-                <LinkedInIcon/>
+                <a href='https://www.instagram.com/_alatabla_/'><InstagramIcon/></a>
+                <a><FacebookIcon/></a>
+                <a href='https://github.com/JuanBonadeo'><GitHubIcon/></a>
+                <a><LinkedInIcon/></a>
             </div>
             <h5>©ALATABLA Copyright  todos los derechos reservados</h5>
             <h5>Develop by:   <a>JuanBonadeo</a></h5>

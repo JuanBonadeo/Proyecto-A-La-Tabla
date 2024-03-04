@@ -29,18 +29,21 @@
 }
 
 @media (max-width: 1200px ){
-
+    .Hero1Container{
+        height: 70vh
+    }
     .HeroCaption h3{
         font-size: 2em;
         color: #e3e3e3;
         margin-left: 0em;
         margin-bottom: 0em;
     }
+    
 
 }
-@media (max-width: 680px ){
+@media (max-width: 720px ){
     .Hero1Container{
-        height: 80vh
+        height: 60vh
     }
     .HeroCaption h3{
         font-size: 1em;
@@ -51,4 +54,10 @@
         display: none;
     }
 
+}
+@media screen and (max-width: 550px) {
+    .Hero1Container{
+        height: 30vh
+    }
+    
 }

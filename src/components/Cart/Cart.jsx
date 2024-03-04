@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import './cart.css'
 import { CartContext } from '../../context/CartContext'
 import Button from '../Button/Button'
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 
 const Cart = () => {
@@ -46,16 +47,16 @@ const Cart = () => {
                                   <p>Precio x unidad: ${prod.precio}</p>
                                   <p>Precio total: ${prod.quantity * prod.precio}</p>
                                 </div>
-                                <button onClick={() => removeItem(prod.id)}>X</button>
+                                <DeleteOutlineIcon className='delete' onClick={() => removeItem(prod.id)}></DeleteOutlineIcon>
                             </div>
                         )
                     })
                 }
             </div>
       <div className="btnTotal">
+        <h5>Total de la compra ${total}</h5>
         <Button action={() => clearCart()} label="Limpiar Carrito"/>    
         <Button action={() => buyCart()} label="Comprar"/>    
-        <h4>Total de la compra ${total}</h4>
       </div>
             
 

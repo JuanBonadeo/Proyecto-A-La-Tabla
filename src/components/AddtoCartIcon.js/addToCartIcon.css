@@ -6,13 +6,14 @@
     
 }.carrito:hover{
     scale: 1.1;
+    transition: .3s;
 }
 .carritoCounter{
     border: none;
     color: #ffffff;
     position: relative;
-    top: 12px;
-    left: 25px;
+    top: 11px;
+    left: 24px;
 }
 .carrito svg{
     color: #ffffff;

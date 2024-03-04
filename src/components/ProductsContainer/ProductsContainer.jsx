@@ -4,6 +4,7 @@ import './productsContainer.css'
 import { collection, getDocs, where, query } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebaseConfig'
 import ProductList from './ProductList'
+import { Loader } from '../Loader/Loader'
 
 
 export default function ProductsContainer() {
@@ -30,7 +31,7 @@ export default function ProductsContainer() {
   }, []);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <Loader/>;
   }
   return (
       <ProductList products={products} />

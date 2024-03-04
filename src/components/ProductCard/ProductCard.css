@@ -17,7 +17,7 @@
     cursor: pointer;
 }.imgProduct:hover{
     scale: 1.015;
-    filter: drop-shadow(0 0 1px #f2c202);
+    filter: drop-shadow(0 0 1px #FE9426);
 }
 .cardInfo{
     display: flex;

@@ -9,7 +9,9 @@
     width: 90%;
     color: azure;
 }.productsContainer h2{
-    border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid azure;
+    font-variant: small-caps;
+
 }
 .ProductList{
     display: flex;
