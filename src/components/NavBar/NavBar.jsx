@@ -15,7 +15,6 @@ function Header() {
         <div className="mobileContainerNavRight">
           <CartIcon className="mobile"/> 
           <Navbar.Toggle aria-controls="basic-navbar-nav"/> 
-        
         </div>   
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto navLinks">
@@ -29,7 +28,7 @@ function Header() {
         </div>  
       </Container>
     </Navbar>
-  );
+  )
 }
 
 export default Header;

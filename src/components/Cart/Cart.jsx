@@ -13,24 +13,36 @@ const Cart = () => {
 }
   const { cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart } = useCart();
   const buyCart = () => {
-    let mensajePedido = "Hola, este es mi pedido:\n\n";
+    Swal.fire({
+      title: 'Deseas de borrar el carrito?',
+      showCancelButton: true,
+      confirmButtonText: 'Limpiar',
+      cancelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Toast.fire('',"redireccionando a WhatsApp", 'info')
+        let mensajePedido = "Hola, este es mi pedido:\n\n";
+        cart.forEach((prod) => {
+          mensajePedido += `${prod.nombre} - Cantidad: ${
+            prod.quantity
+          } - Precio: $${prod.precio * prod.quantity}\n`;
+        });
+        mensajePedido += `\nTotal: $${total}\n`;
+
+        // Completar con el número de WhatsApp
+        const numeroWhatsApp = "543412524906";
+
+        // Abrir la ventana de chat de WhatsApp con el mensaje del carrito
+        const urlWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
+          mensajePedido
+        )}`;
+        window.open(urlWhatsApp, "_blank");
+        clearCart()
+      } else  {
+        Toast.fire('','Changes are not saved', 'info')
+      }
+    })
     
-    cart.forEach((prod) => {
-      mensajePedido += `${prod.nombre} - Cantidad: ${
-        prod.quantity
-      } - Precio: $${prod.precio * prod.quantity}\n`;
-    });
-    mensajePedido += `\nTotal: $${total}\n`;
-    
-    // Completar con el número de WhatsApp
-    const numeroWhatsApp = "543412524906";
-    
-    // Abrir la ventana de chat de WhatsApp con el mensaje del carrito
-    const urlWhatsApp = `https://web.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(
-      mensajePedido
-    )}`;
-    window.open(urlWhatsApp, "_blank");
-    clearCart()
   }
   return (
     <div className='cartContainer'>

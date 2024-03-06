@@ -1,9 +1,8 @@
 
 .navBar{
     background-color: black;
-    display: flex;
     margin: 0;
-    
+    border-bottom: solid .01px #FE9426;
 }
 .mobileContainerNav .title{
     font-size: 2em;

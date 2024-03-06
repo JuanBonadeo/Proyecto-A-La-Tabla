@@ -15,16 +15,17 @@ function App() {
   return (
     <div className='App'>
     <BrowserRouter>
-    <CartProvider>
-        <Header/> 
-        
+      <CartProvider>
+      <Header/> 
+      <div className="contain">
         <Routes>
           <Route path="/" element={<HomeView/>}/>
             <Route path="/producto/:productId" element={<ProductInfoView/>}/>
           <Route path="/carrito" element={<Cart/>}/>
         </Routes>  
-        <Footer/>
-        </CartProvider>
+      </div>
+      <Footer/>
+      </CartProvider>
     </BrowserRouter>
     </div>
   )
