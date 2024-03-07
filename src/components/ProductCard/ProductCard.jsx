@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductCard.css'
 import { CartContext } from '../../context/CartContext';
+
 import AddToCartIcon from '../AddtoCartIcon.js/AddToCartIcon';
 
 export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
@@ -14,8 +15,7 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
         id, nombre, precio, quantity,img1,img2,img3
     }
     addItem(productToAdd)
-    
-} 
+  } 
   return (
     <div className='productCardContainer'>
       <Link to={`/producto/${id}`}><img src={img1} alt='product' className='imgProduct'/></Link>

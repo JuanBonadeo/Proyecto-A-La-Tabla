@@ -4,9 +4,7 @@ import './productsContainer.css'
 import React from 'react'
 
 export default function ProductList({ products}) {
-    let filteredProducts = [...products];
-    console.log(filteredProducts)
-    
+    let filteredProducts = [...products];    
   return (
     <>
     <div className='productsContainer'>
