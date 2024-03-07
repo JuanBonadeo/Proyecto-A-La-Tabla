@@ -9,7 +9,7 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
   const useCart = () => {
     return useContext(CartContext)
   }
-  const { addItem, quantity } = useCart();
+  const { addItem, quantity, formatearMoneda} = useCart();
   const handleOnAdd = (quantity) => {
     const productToAdd = {
         id, nombre, precio, quantity,img1,img2,img3
@@ -22,7 +22,7 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
       <div className="cardInfo">
         <div className="namePrice">
           <h4>{nombre}</h4>
-          <span>${precio}</span>
+          <span>{formatearMoneda(precio)}</span>
         </div>
         
           <AddToCartIcon onAdd={handleOnAdd}/>

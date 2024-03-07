@@ -39,7 +39,7 @@ export const CartProvider = ({ children }) => {
         });
       } else {
         const updatedCart = cart.map(prod => {
-          if (prod.id === id) {
+          if (prod.id === id && prod.quantity < 10) {
             return {
               ...prod,
               quantity: prod.quantity + 1
@@ -63,6 +63,41 @@ export const CartProvider = ({ children }) => {
           title: `eliminado`
         })
     }   
+    const updateQuantity = (id, addedQuantity) => {
+      const updatedCart = cart.map(prod => {
+        if (prod.id === id && prod.quantity + addedQuantity <= 10) {
+          const newQuantity = prod.quantity + addedQuantity;
+          if (newQuantity <= 0) {
+            Toast.fire({
+              icon: "info",
+              title: `eliminado`
+            })
+            return null;
+          } else {
+            return {
+              ...prod,
+              quantity: newQuantity
+            };
+          }
+        } else {
+          return prod;
+        }
+      }).filter(Boolean); // Remove any null values from the updatedCart array
+      setCart(updatedCart);
+    }
+    const updateQuantitySelect = (id, newQuantity) => {
+      const updatedCart = cart.map(prod => {
+        if (prod.id === id) {
+          return {
+            ...prod,
+            quantity: newQuantity
+          };
+        } else {
+          return prod;
+        }
+      });
+      setCart(updatedCart);
+    }
     const getTotalQuantity = () => {
         let totalQuantity = 0
 
@@ -104,10 +139,18 @@ export const CartProvider = ({ children }) => {
           }
         })
     }
-
+    const formatearMoneda = (cantidad) => {
+      const formatoMonedaArgentina = new Intl.NumberFormat('es-AR', {
+        style: 'currency',
+        currency: 'ARS',
+        maximumFractionDigits: 0
+      });
+    
+      return formatoMonedaArgentina.format(cantidad);
+    }
 
     return (
-        <CartContext.Provider value={{ cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart }}>
+        <CartContext.Provider value={{ cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart, updateQuantity,updateQuantitySelect, formatearMoneda }}>
             { children }
         </CartContext.Provider>
     )

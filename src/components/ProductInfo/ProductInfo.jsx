@@ -23,7 +23,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
   const useCart = () => {
     return useContext(CartContext)
   }
-  const { addItem, quantity } = useCart();
+  const { addItem, quantity, formatearMoneda} = useCart();
   const handleOnAdd = (quantity) => {
     const productToAdd = {
         id, nombre, precio, quantity,img1,img2,img3
@@ -48,15 +48,15 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
         <h2>{nombre}</h2>
         <p>{descripcion}</p>
         <div className="priceAddto">
-          <h5>Precio: {precio}$</h5>
+          <h5>Precio: {formatearMoneda(precio)}</h5>
           <Button action={handleOnAdd} label='Agregar al Carrito'/>
         </div>
         <div className="infoPayment">
-          <h5>Metodos de Pago</h5>
+          <h5>Metodos de Pago:</h5>
           <div className="paymentMethods">
-            <AccountBalanceIcon/>
-            <CreditCardIcon/>
-            <LocalAtmIcon/>
+            <div className="paymentItem"><CreditCardIcon/><span>Debito</span></div>
+            <div className="paymentItem"><AccountBalanceIcon/><span>Transf. Bancaria</span></div>
+            <div className="paymentItem"><LocalAtmIcon/><span>Efectivo</span></div>
           </div>
         </div>
         <div className="envios"><h5>Envios a Todo el Pais </h5><LocalShippingIcon/></div>

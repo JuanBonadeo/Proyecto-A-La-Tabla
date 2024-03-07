@@ -23,31 +23,76 @@
     align-items: center;
     flex-direction: column;
     margin: 0 auto;
+    gap: 1em;
 }
 .productInCart{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border: 1px solid azure;
     width: 90%;
     margin: 0 auto;
     color: azure;
     gap: 2em;
+    background-color: rgb(6, 6, 6);
+    border-radius: 1px;
 
 }
 .productInCart img{
     width: 100px;
     height: 100px;
 }
-.productInCart .info{
+.imgName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+
+}.controls{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    margin-top: .7em;
-    font-size: .8em;
-    
+    margin-right: 2em;
+    gap: 3em;
+}
+.quantityControl{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    background-color: rgb(10, 10, 10);
+    height: 2em;
+    border: solid 1px azure;
+    border-radius: 1px;
+    user-select: none;
+}
+.quantityControl button{
+    background-color: rgba(10, 10, 10, 0);
+    color: azure;
+    border: none;
+    cursor: pointer;
+}.quantityControl button:hover{
+    scale: 1.1;
+}.quantityControl p{
+    margin-top: 1em;
+}
+.price{
+    margin-top: 1em;
+}
+.delete{
+    cursor: pointer;
+}.delete:hover{
+    scale: 1.1;
+}
+.select{
+    display: none;
+}
+.controls select{
+    display: none;
 }
 .btnTotal{
     display: flex;
@@ -55,11 +100,7 @@
     align-items: center;
     gap: 1em;
 }
-.delete{
-    cursor: pointer;
-}.delete:hover{
-    scale: 1.1;
-}
+
 
 @media (max-width: 1100px ){
     .cartContainer{
@@ -71,10 +112,9 @@
     .productInCart h4 {
         font-size: 1em;
     }
-    .productInCart .info{
-        gap: 1em;
-        margin-top: 1em;
-        font-size: .6em;
+    .controls{
+        gap: 1.5em;
+        font-size: small;
     }
     .btnTotal{
         flex-direction: column;
@@ -87,22 +127,18 @@
     .productInCart h4 {
         font-size: .9em;
     }
-    .productInCart .info{
-        gap: 0;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: start;
-    }
     .btnTotal{
         flex-direction: column;
     }
     .productInCart img{
         height: 110px;
     }
+    .controls{
+        margin-right: .5em;
+        gap: 1em;
+    }
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 550px){
     .cartContainer{
         width: 100%;
         margin-top: 1em;
@@ -113,12 +149,38 @@
     .productInCart{
         width: 95%;
         gap: .5em;
-    }.productInCart .info{
-        gap: .1em;
-        margin: 0;
-        font-size: .6em;
-        
-
+    }
+    .controls{
+        gap: .5em;
+        margin-right: .1em;
+    }
+    .controls select{
+        display: inline;
+    }.controls .quantityControl{
+        display: none;
+    }
+}
+@media screen and (max-width: 470px){
+    .productInCart{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 0
+    }.productInCart img{
+        height: 80px;
+        width: 80px;
     }
 
+    .imgName{
+        gap: .5em;
+        border-radius: 1px;
+    }.imgName h4{
+        font-size: 1.2em;
+        margin-top: .3em;
+    }
+    .controls{
+        gap: 2em;
+        margin: 0 auto;
+    }
+    
 }

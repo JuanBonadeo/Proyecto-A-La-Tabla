@@ -6,14 +6,19 @@ import { CartContext } from '../../context/CartContext'
 import Button from '../Button/Button'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
  import Swal from 'sweetalert2';
+import QuantityControl from '../QuantityControl/QuantityControl'
 
 const Cart = () => {
   const useCart = () => {
     return useContext(CartContext)
 }
-  const { cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart } = useCart();
- 
-
+  const { cart, addItem, totalQuantity, removeItem, isInCart, total, clearCart, updateQuantity,updateQuantitySelect, formatearMoneda } = useCart();
+  const handleOnAdd = (id, x) => {
+    updateQuantity(id, x)
+  }
+  const handleOnChange = (id,x) => {;
+    updateQuantitySelect(id, x);
+  }
   const buyCart = () => {
     Swal.fire({
       title: 'Confirmar compra',
@@ -67,21 +72,27 @@ const Cart = () => {
                  cart.map(prod => {
                         return (       
                             <div className='productInCart' key={prod.id}>
-                                <Link to={`/producto/${prod.id}`}><img className="" src={prod.img1}></img>  </Link> 
-                                <h4>{prod.nombre}</h4>
-                                <div className="info">
-                                  <p>Cantidad: {prod.quantity}</p>
-                                  <p>Precio x unidad: ${prod.precio}</p>
-                                  <p>Precio total: ${prod.quantity * prod.precio}</p>
+                                <div className="imgName">
+                                  <Link to={`/producto/${prod.id}`}><img className="" src={prod.img1}></img>  </Link> 
+                                  <h4>{prod.nombre}</h4>
                                 </div>
-                                <DeleteOutlineIcon className='delete' onClick={() => removeItem(prod.id)}></DeleteOutlineIcon>
+                                <div className="controls"> 
+                                <QuantityControl className="select"  prod={prod} updateQuantity={handleOnChange} />
+                                  <div className="quantityControl">
+                                    <button onClick={() => updateQuantity(prod.id, -1)}>-</button>
+                                    <p>{prod.quantity}</p>
+                                    <button onClick={() => updateQuantity(prod.id, +1)}>+</button>
+                                </div>
+                                  <p className='price'>{formatearMoneda(prod.precio * prod.quantity)}</p>
+                                  <DeleteOutlineIcon className='delete' onClick={() => removeItem(prod.id)}></DeleteOutlineIcon>
+                                </div>
                             </div>
                         )
                     })
                 }
             </div>
       <div className="btnTotal">
-        <h5>Total de la compra ${total}</h5>
+        <h5>Total de la compra: {formatearMoneda(total)}</h5>
         <Button action={() => clearCart()} label="Vaciar Carrito"/>    
         <Button action={() => buyCart()} label="Comprar"/>    
       </div>

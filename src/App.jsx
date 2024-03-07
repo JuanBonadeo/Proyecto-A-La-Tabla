@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import ProductInfoView from './components/ProductInfo/ProudctInfoView'
 import Cart from './components/Cart/Cart'
 import { CartProvider } from './context/CartContext'
+import WspButton from './components/WspButton/WspButton'
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/carrito" element={<Cart/>}/>
         </Routes>  
       </div>
+      <WspButton/>
       <Footer/>
       </CartProvider>
     </BrowserRouter>

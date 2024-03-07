@@ -1,6 +1,5 @@
 .carrito{
     display: flex;
-    height: 2em;
     margin-bottom: 10px;
     background-color: #00000000;
     border: none;
@@ -8,12 +7,16 @@
 }.carrito:hover{
     scale: 1.1;
 }
-.carritoCounter{
+.carritoCounter {
     border: none;
-    color: #ffffff;
+    color: #000000;
     position: relative;
-    top: 12px;
-    left: 25px;
+    top: -7px;
+    left: 50px;
+    background-color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
 }
 .carrito svg{
     color: #ffffff;

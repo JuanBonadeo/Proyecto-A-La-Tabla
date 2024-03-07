@@ -1,0 +1,16 @@
+.select {
+    display: flex;
+  }
+  
+  .select select {
+    background-color: #000000; 
+    border: 1px solid azure; 
+    color: #fff; 
+    padding: 0.5rem; 
+    cursor: pointer;
+    border-radius: 1px;
+  }
+  
+
+ 
+  
