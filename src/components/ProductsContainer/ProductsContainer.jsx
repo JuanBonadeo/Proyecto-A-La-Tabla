@@ -8,6 +8,9 @@ import { Loader } from '../Loader/Loader'
 
 
 export default function ProductsContainer() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true)
   const fetchProducts = async () => {

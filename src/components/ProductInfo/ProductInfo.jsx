@@ -8,6 +8,7 @@ import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { CartContext } from '../../context/CartContext';
+import { motion } from 'framer-motion';
 
 
 export default function ProductInfo({id, nombre, precio, img1,img2,img3, descripcion }) {
@@ -33,7 +34,12 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
   return (
     <>
     <div className='productInfoContainer'>
-    <Carousel  activeIndex={index} onSelect={handleSelect} className='carouselContainer'>
+    <motion.div
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    transition={{duration: 1, ease: "easeInOut", delay: 0.7, type: "tween"}}
+    ><Carousel  
+    activeIndex={index} onSelect={handleSelect} className='carouselContainer'>
                 <Carousel.Item interval={10000}>
                  <img className="infoImg" src={img1}></img>   
                 </Carousel.Item>
@@ -43,8 +49,12 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
                 <Carousel.Item  interval={10000}>
                  <img className="infoImg" src={img3}></img>   
                 </Carousel.Item>
-      </Carousel>
-      <div className="information">
+      </Carousel></motion.div>
+      <motion.div 
+      initial={{scale:0, opacity: 0}}
+      animate={{scale:1, opacity: 1}}
+      transition={{duration: .7, ease: "easeInOut", type: "spring", delay: 1}}
+      className="information">
         <h2>{nombre}</h2>
         <p>{descripcion}</p>
         <div className="priceAddto">
@@ -60,7 +70,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
           </div>
         </div>
         <div className="envios"><h5>Envios a Todo el Pais </h5><LocalShippingIcon/></div>
-      </div>
+      </motion.div>
     </div>
 
     </>

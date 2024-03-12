@@ -30,6 +30,12 @@
 }#basic-navbar-nav{
     border: none;
 }
+.mobileContainerNavRight button{
+    border: none;
+}
+.mobileContainerNavRight button:active{
+    box-shadow: none;
+}
 
 @media (max-width: 1200px){
 .mobileContainerNav{

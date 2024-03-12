@@ -3,9 +3,14 @@ import './contacto.css';
 import Button from '../Button/Button';
 import Swal from 'sweetalert2';
 import { motion } from "framer-motion"
+import { useEffect } from 'react';
 
 
 export const Contacto = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     const sendMessage = () => {
         Swal.fire({
             title: 'Enviar mensaje',

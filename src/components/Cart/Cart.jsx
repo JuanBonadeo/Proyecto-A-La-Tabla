@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext } from 'react'
+import { useContext, useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import './cart.css'
 import { CartContext } from '../../context/CartContext'
@@ -20,6 +20,9 @@ const Cart = () => {
   const handleOnChange = (id,x) => {;
     updateQuantitySelect(id, x);
   }
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const buyCart = () => {
     Swal.fire({
       title: 'Confirmar compra',
@@ -69,9 +72,9 @@ const Cart = () => {
     
     <div className='cartContainer'>
       <motion.h1 
-      initial={{scale: 0, x: '-100vw'}}
-            animate={{scale: 1, x: 0}}
-            transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
+        initial={{scale: 0, x: '-100vw'}}
+        animate={{scale: 1, x: 0}}
+        transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
       >Carrito</motion.h1>
       <div className='cartItems'>
                 {
