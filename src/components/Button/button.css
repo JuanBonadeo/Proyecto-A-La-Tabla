@@ -29,7 +29,7 @@
 @media (max-width: 800px ){
     .Button{
         font-size: 0.8em;
-        height: 28px;
+        height: auto;
         width: 100px;
         }
 

@@ -8,9 +8,11 @@
     margin: 3em auto;
     width: 90%;
     color: azure;
-}.productsContainer h2{
+}.productsContainer h1{
     border-bottom: 1px solid azure;
     font-variant: small-caps;
+    font-size: 1.5em;
+    margin-top: .5em;
 
 }
 .ProductList{

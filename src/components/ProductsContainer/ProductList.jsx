@@ -9,13 +9,21 @@ export default function ProductList({ products}) {
   return (
     <>
     <div className='productsContainer'>
-        <h2>
+        <motion.h1
+        initial={{scale: 0, x: '-100vw'}}
+        animate={{scale: 1, x: 0}}
+        transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
+        >
           Estos son Nuestros Productos
-        </h2>
+        </motion.h1>
 
-        <div className="ProductList">
+        <motion.div 
+        initial={{scale: 0, x: '-100vw'}}
+        animate={{scale: 1, x: 0}}
+        transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
+        className="ProductList">
           {filteredProducts.map(product => <ProductCard key={product.id} {...product}/>)}
-        </div>
+        </motion.div>
     </div> 
 </>
   )

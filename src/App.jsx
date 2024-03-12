@@ -27,6 +27,7 @@ function App() {
           <Route path="/carrito" element={<Cart/>}/>
           <Route path="/contacto" element={<Contacto/>}/>
           <Route path="/productos" element={<ProductsContainer/>}/>
+          <Route path="/quienesSomos" element={<ProductsContainer/>}/>
         </Routes>  
       </div>
       <WspButton/>

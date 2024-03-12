@@ -7,6 +7,8 @@ import ProductList from './ProductList'
 import { Loader } from '../Loader/Loader'
 
 
+
+
 export default function ProductsContainer() {
   useEffect(() => {
     window.scrollTo(0, 0);

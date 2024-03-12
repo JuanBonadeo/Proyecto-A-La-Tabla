@@ -7,7 +7,7 @@ import Button from '../Button/Button'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
  import Swal from 'sweetalert2';
 import QuantityControl from '../QuantityControl/QuantityControl'
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 const Cart = () => {
   const useCart = () => {
