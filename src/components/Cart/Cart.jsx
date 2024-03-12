@@ -1,12 +1,13 @@
 import React from 'react'
-import { useEffect, useState, useContext } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useContext } from 'react'
+import { Link } from 'react-router-dom'
 import './cart.css'
 import { CartContext } from '../../context/CartContext'
 import Button from '../Button/Button'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
  import Swal from 'sweetalert2';
 import QuantityControl from '../QuantityControl/QuantityControl'
+import { AnimatePresence, motion } from "framer-motion"
 
 const Cart = () => {
   const useCart = () => {
@@ -65,13 +66,24 @@ const Cart = () => {
     });
   };
   return (
+    
     <div className='cartContainer'>
-      <h1>Carrito</h1>
+      <motion.h1 
+      initial={{scale: 0, x: '-100vw'}}
+            animate={{scale: 1, x: 0}}
+            transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
+      >Carrito</motion.h1>
       <div className='cartItems'>
                 {
                  cart.map(prod => {
                         return (       
-                            <div className='productInCart' key={prod.id}>
+                            <motion.div 
+                            initial={{scale: 0, x: '-100vw'}}
+                            animate={{scale: 1, x: 0}}
+                            transition={{duration: 1.2, ease: "easeInOut", delay: 0.5, type: "spring"}}
+                            
+                            
+                            className='productInCart' key={prod.id}>
                                 <div className="imgName">
                                   <Link to={`/producto/${prod.id}`}><img className="" src={prod.img1}></img>  </Link> 
                                   <h4>{prod.nombre}</h4>
@@ -86,16 +98,20 @@ const Cart = () => {
                                   <p className='price'>{formatearMoneda(prod.precio * prod.quantity)}</p>
                                   <DeleteOutlineIcon className='delete' onClick={() => removeItem(prod.id)}></DeleteOutlineIcon>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })
                 }
             </div>
-      <div className="btnTotal">
+      <motion.div 
+      initial={{scale: 0, opacity: 0}}
+      animate={{scale: 1, opacity: 1}}
+            transition={{duration: 1.5, ease: "easeInOut", delay: 1, type: "spring"}}
+      className="btnTotal">
         <h5>Total de la compra: {formatearMoneda(total)}</h5>
-        <Button action={() => clearCart()} label="Vaciar Carrito"/>    
+        <Button action={() => clearCart()} label="Vaciar"/>    
         <Button action={() => buyCart()} label="Comprar"/>    
-      </div>
+      </motion.div>
             
 
     </div>

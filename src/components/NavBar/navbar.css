@@ -18,11 +18,19 @@
 }.navLinks a:hover{
     scale: 1.1;
     transition: .3s;
+    border: none;
+    color: azure;
+}.sape{
+    border: none;
+
 }
 .mobileContainerNavRight{
     display: none;
 
+}#basic-navbar-nav{
+    border: none;
 }
+
 @media (max-width: 1200px){
 .mobileContainerNav{
         display: flex;

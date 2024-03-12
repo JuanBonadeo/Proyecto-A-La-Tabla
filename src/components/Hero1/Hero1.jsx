@@ -14,7 +14,7 @@ const Hero1 = () =>{
           />
           <Carousel.Caption className='HeroCaption '>
             <h3>Productos Nobles para todos los Domingos</h3>
-            <Button to='#' label="Ver Mas"></Button>
+            <Button to='/productos' label="Ver Mas"></Button>
           </Carousel.Caption>
         </Carousel.Item> 
         
@@ -26,7 +26,7 @@ const Hero1 = () =>{
           />
           <Carousel.Caption className='HeroCaption'>
             <h3>Revolucionamos el Asado Argentino</h3>
-            <Button to='#' label="Ver Mas"></Button>
+            <Button to='/productos' label="Ver Mas"></Button>
           </Carousel.Caption>
         </Carousel.Item> 
 
@@ -37,8 +37,8 @@ const Hero1 = () =>{
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption'>
-            <h3>Productos Nobles para todos los domingos</h3>
-            <Button to='#' label="Ver Mas"></Button>
+            <h3 className='lasth3'>Descubrí el secreto de los grandes asadores con nuestra selección exclusiva.</h3>
+            <Button to='/productos' label="Ver Mas"></Button>
           </Carousel.Caption>
         </Carousel.Item> 
 

@@ -3,19 +3,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
-   
-    
+    height: 90vh;
+    opacity: 1;
+}
+.hero0Container .titles{
+    z-index: 1;
 }
 .title{
     font-size: 5em;
-    
     color: #FE9426;
     text-align: center;
     margin-bottom: 1rem;
     z-index: 1;
     text-transform: uppercase;
     font-variant: small-caps;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #00000045;
 }
 .subtitle{
     font-size: 2em;
@@ -34,8 +37,9 @@
     top: 0;
     left: 0;
     z-index: 0,4;
-    filter: blur(1px)opacity(0.9)contrast(1.2)brightness(0.6)drop-shadow(0 0 0.5rem #f6e102);
+    filter: opacity(0.7)contrast(1)brightness(0.7)
 }
+
 
 @media screen and (max-width: 768px) {
     .title{

@@ -1,0 +1,32 @@
+.contactoContainer{
+    width: 90%;
+    margin: 0 auto;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    color: azure;
+}
+.contactoContainer h1{
+    font-size: 3em;
+    font-variant: small-caps;
+    border-bottom: 1px solid azure;
+    width: min-content;
+    margin: 0 auto;
+}
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+}
+.form-group input, .form-group textarea{
+    background-color: transparent;
+    color: azure;
+}
+.form-group input:focus, .form-group textarea:focus{
+    background-color: transparent;
+    border: none;
+    color: azure;
+    box-shadow: 0 0 5px 1px #FE9426;
+}

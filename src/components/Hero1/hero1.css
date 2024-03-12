@@ -1,6 +1,7 @@
 .Hero1Container{
     height: 90vh;
     width: 100%;
+    margin-top: 1.5em;
 }
 .HeroCaption{
     display: flex;
@@ -26,24 +27,32 @@
     width: 100%;
     filter:contrast(0.8);
     filter: brightness(0.8);
+    filter: opacity(0.6);
 }
-
+.lasth3{
+    text-align: center;
+}
 @media (max-width: 1200px ){
     .Hero1Container{
         height: 70vh
     }
     .HeroCaption h3{
         font-size: 2em;
-        color: #e3e3e3;
         margin-left: 0em;
         margin-bottom: 0em;
     }
-    
-
+}
+@media (max-width: 1000px ){
+    .Hero1Container{
+        height: 50vh
+    }
+    .HeroCaption h3{
+        font-size: 1.9em;
+    }
 }
 @media (max-width: 720px ){
     .Hero1Container{
-        height: 60vh
+        height: 40vh
     }
     .HeroCaption h3{
         font-size: 1em;
