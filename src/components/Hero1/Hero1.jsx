@@ -13,7 +13,7 @@ const Hero1 = () =>{
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption '>
-            <h3>Productos Nobles para todos los Domingos</h3>
+            <h3>Revolucionamos el Asado Argentino</h3>
             <Button to='/productos' label="Ver Mas"></Button>
           </Carousel.Caption>
         </Carousel.Item> 
@@ -25,7 +25,7 @@ const Hero1 = () =>{
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption'>
-            <h3>Revolucionamos el Asado Argentino</h3>
+            <h3>Productos Nobles para todos los Domingos</h3>
             <Button to='/productos' label="Ver Mas"></Button>
           </Carousel.Caption>
         </Carousel.Item> 

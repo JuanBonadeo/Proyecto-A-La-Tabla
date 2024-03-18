@@ -13,7 +13,7 @@ export default function Hero2() {
       transition={{duration: 1, ease: "easeInOut", delay: 0.5, type: "spring"}}
     
       >
-      <h1 className='title'>A la Tabla</h1>
+      <h1 className='title'>A La Tabla</h1>
       <h2 className='subtitle'>La mejor Calidad en Productos de Madera</h2>
       </motion.div>
       
