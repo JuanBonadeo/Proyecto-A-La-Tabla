@@ -6,7 +6,7 @@ export default function Hero2() {
   return (
     <div className="hero0Container" >
       
-      <img src="fondo.jpg"></img>
+      <img src="fondo.jpg" alt='tablas'></img>
       <motion.div className='titles'
       initial={{scale: 0, x: '-100vw'}}
       animate={{scale: 1, x: 0}}

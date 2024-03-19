@@ -9,7 +9,6 @@ export const CartContext = createContext([])
   showConfirmButton: false,
   timer: 2000,
   timerProgressBar: true,
-  theme: 'dark',
   didOpen: (toast) => {
     toast.addEventListener('mouseenter', Swal.stopTimer)
     toast.addEventListener('mouseleave', Swal.resumeTimer)

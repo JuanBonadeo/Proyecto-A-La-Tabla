@@ -18,7 +18,7 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
   } 
   return (
     <div className='productCardContainer'>
-      <Link to={`/producto/${id}`}><img src={img1} alt='product' className='imgProduct'/></Link>
+      <Link to={`/producto/${id}`}><img src={img1} alt={`${nombre}`} className='imgProduct'/></Link>
       <div className="cardInfo">
         <div className="namePrice">
           <h4>{nombre}</h4>

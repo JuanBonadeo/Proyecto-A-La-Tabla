@@ -37,7 +37,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
     <motion.div
     initial={{opacity: 0}}
     animate={{opacity: 1}}
-    transition={{duration: 1, ease: "easeInOut", delay: 0.7, type: "tween"}}
+    transition={{duration: 1.2, ease: "easeInOut", delay: 0.6, type: "tween"}}
     ><Carousel  
     activeIndex={index} onSelect={handleSelect} className='carouselContainer'>
                 <Carousel.Item interval={10000}>
@@ -53,7 +53,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
       <motion.div 
       initial={{scale:0, opacity: 0}}
       animate={{scale:1, opacity: 1}}
-      transition={{duration: .7, ease: "easeInOut", type: "spring", delay: 1}}
+      transition={{duration: .7, ease: "easeInOut", type: "spring", delay: .6}}
       className="information">
         <h2>{nombre}</h2>
         <p>{descripcion}</p>
