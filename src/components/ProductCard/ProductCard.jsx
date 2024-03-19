@@ -25,7 +25,7 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
           <span>{formatearMoneda(precio)}</span>
         </div>
         
-          <AddToCartIcon onAdd={handleOnAdd}/>
+        <AddToCartIcon onAdd={handleOnAdd}/>
       </div>
       
     </div>

@@ -50,7 +50,7 @@ export const CartProvider = ({ children }) => {
         setCart(updatedCart);
         Toast.fire({
           icon: 'success',
-          title: `${nombre} ha sido agregado al carrito`
+          title: `${nombre} agregado al carrito`
         });
       }
     }
