@@ -9,7 +9,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src="/public/hero1.jpg"
+            src="hero1.jpg"
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption '>
@@ -21,7 +21,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src="/public/hero2.jpeg"
+            src="hero2.jpeg"
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption'>
@@ -33,7 +33,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src="/public/hero3.jpeg"
+            src="hero3.jpeg"
             alt="First slide"
           />
           <Carousel.Caption className='HeroCaption'>
