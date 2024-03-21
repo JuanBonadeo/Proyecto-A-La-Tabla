@@ -24,10 +24,10 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
   const useCart = () => {
     return useContext(CartContext)
   }
-  const { addItem, quantity, formatearMoneda} = useCart();
-  const handleOnAdd = (quantity) => {
+  const { addItem, formatearMoneda} = useCart();
+  const handleOnAdd = () => {
     const productToAdd = {
-        id, nombre, precio, quantity,img1,img2,img3
+        id, nombre, precio,img1,img2,img3
     }
     addItem(productToAdd)
   } 

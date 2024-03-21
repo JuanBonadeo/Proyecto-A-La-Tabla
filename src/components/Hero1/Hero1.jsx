@@ -23,6 +23,7 @@ const Hero1 = () =>{
             className="imgHero1"
             src="/hero2.jpeg"
             alt="First slide"
+            loading='lazy'
           />
           <Carousel.Caption className='HeroCaption'>
             <h3>Productos Nobles para todos los Domingos</h3>
@@ -35,6 +36,7 @@ const Hero1 = () =>{
             className="imgHero1"
             src="/hero3.jpeg"
             alt="First slide"
+            loading='lazy'
           />
           <Carousel.Caption className='HeroCaption'>
             <h3 className='lasth3'>Descubrí el secreto de los grandes asadores con nuestra selección exclusiva.</h3>

@@ -9,16 +9,16 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
   const useCart = () => {
     return useContext(CartContext)
   }
-  const { addItem, quantity, formatearMoneda} = useCart();
-  const handleOnAdd = (quantity) => {
+  const { addItem, formatearMoneda} = useCart();
+  const handleOnAdd = () => {
     const productToAdd = {
-        id, nombre, precio, quantity,img1,img2,img3
+        id, nombre, precio,img1,img2,img3
     }
     addItem(productToAdd)
   } 
   return (
     <div className='productCardContainer'>
-      <Link to={`/producto/${id}`}><img src={img1} alt={`${nombre}`} className='imgProduct'/></Link>
+      <Link to={`/producto/${id}`}><img src={img1} alt={`${nombre}`} loading='lazy' className='imgProduct'/></Link>
       <div className="cardInfo">
         <div className="namePrice">
           <h4>{nombre}</h4>
