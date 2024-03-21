@@ -17,7 +17,7 @@ function Header() {
       <Container className='mobileContainerNav'>
         <Logo />
         <div className="mobileContainerNavRight">
-          <CartIcon className="mobile"  />
+          <CartIcon className="mobile"/>
           <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} />
         </div>
         <Navbar.Collapse id="basic-navbar-nav">
