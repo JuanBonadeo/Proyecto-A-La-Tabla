@@ -9,10 +9,10 @@ export default function ProductCard({nombre,img1,img2,img3,precio,id}) {
   const useCart = () => {
     return useContext(CartContext)
   }
-  const { addItem, formatearMoneda, quantity} = useCart();
-  const handleOnAdd = () => {
+  const { addItem, quantity, formatearMoneda} = useCart();
+  const handleOnAdd = (quantity) => {
     const productToAdd = {
-        id, nombre, precio,img1,img2,img3, quantity
+        id, nombre, precio, quantity, img1,img2,img3
     }
     addItem(productToAdd)
   } 
