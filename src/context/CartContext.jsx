@@ -125,7 +125,7 @@ export const CartProvider = ({ children }) => {
     const clearCart = () => {
         
         Swal.fire({
-          title: 'Deseas de borrar el carrito?',
+          title: '¿Deseas limpiar el carrito?',
           showCancelButton: true,
           confirmButtonText: 'Limpiar',
           cancelButtonText: 'Cancelar',
@@ -133,8 +133,6 @@ export const CartProvider = ({ children }) => {
           if (result.isConfirmed) {
             Toast.fire('',"carrito limpio", 'info')
             setCart([])
-          } else  {
-            Toast.fire('','Changes are not saved', 'info')
           }
         })
     }

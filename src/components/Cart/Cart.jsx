@@ -26,7 +26,7 @@ const Cart = () => {
   const buyCart = () => {
     Swal.fire({
       title: 'Confirmar compra',
-      text: '¿Estás seguro de que deseas realizar la compra?',
+      text: '¿Estás seguro de que deseas realizar la compra? Seras redirigido a WhatsApp para completar la compra.',
       icon: 'question',
       showCancelButton: true,
       confirmButtonText: 'Sí, comprar',
@@ -63,9 +63,7 @@ const Cart = () => {
         window.open(urlWhatsApp, '_blank');
         window.open(urlWhatsApp, '_blank');
         clearCart();
-      } else {
-        Swal.fire('', 'Changes are not saved', 'info');
-      }
+      } 
     });
   };
   return (
