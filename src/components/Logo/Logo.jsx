@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Logo = () => {
   return (
-      <Link to="/"><img className="logo" src="logo.PNG" alt="A la tabla logo" /></Link>
+      <Link to="/"><img className="logo" src="logo.png" alt="A la tabla logo" /></Link>
   );
 };
 
