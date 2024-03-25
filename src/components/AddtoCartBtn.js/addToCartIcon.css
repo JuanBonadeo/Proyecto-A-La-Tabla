@@ -1,0 +1,38 @@
+.linkButton{
+    text-decoration: none;
+    width: 160px;
+    height: 50px;
+    height: min-content;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Button{
+    width: 160px;
+    height: 50px;
+    background-color: #FE9426; 
+    color: #000000;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+    }
+.Button:hover{ 
+    background-color: #ff8400;
+    scale: 1.1;
+    transition: 0.3s; 
+   }
+@media (max-width: 800px ){
+    .Button{
+        font-size: 0.8em;
+        height: auto;
+        width: 100px;
+        }
+
+   }
+
+

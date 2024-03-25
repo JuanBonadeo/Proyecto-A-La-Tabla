@@ -9,6 +9,7 @@ import CreditCardIcon from '@mui/icons-material/CreditCard';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import { CartContext } from '../../context/CartContext';
 import { motion } from 'framer-motion';
+import AddToCartIcon from '../AddtoCartBtn.js/AddToCartBtn';
 
 
 export default function ProductInfo({id, nombre, precio, img1,img2,img3, descripcion }) {
@@ -27,7 +28,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
   const { addItem, quantity, formatearMoneda} = useCart();
   const handleOnAdd = (quantity) => {
     const productToAdd = {
-        id, nombre, precio, quantity,img1,img2,img3
+        id, nombre, precio, quantity, img1,img2,img3
     }
     addItem(productToAdd)
   } 
@@ -59,7 +60,7 @@ export default function ProductInfo({id, nombre, precio, img1,img2,img3, descrip
         <p>{descripcion}</p>
         <div className="priceAddto">
           <h5>Precio: {formatearMoneda(precio)}</h5>
-          <Button action={handleOnAdd} label='Agregar al Carrito'/>
+          <AddToCartIcon onAdd={handleOnAdd}/>
         </div>
         <div className="infoPayment">
           <h5>Metodos de Pago:</h5>
