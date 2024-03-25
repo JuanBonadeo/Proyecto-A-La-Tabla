@@ -9,8 +9,8 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='../images/hero1.jpg'
-            alt="First slide"
+            src='AlaTabla\src\images\hero1.jpg'
+            alt="First-slide"
           />
           <Carousel.Caption className='HeroCaption '>
             <h3>Revolucionamos el Asado Argentino</h3>
@@ -21,8 +21,8 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='../images/hero2.jpeg'
-            alt="First slide"
+            src='AlaTabla\src\images\hero2.jpeg'
+            alt="Second-slide"
           />
           <Carousel.Caption className='HeroCaption'>
             <h3>Productos Nobles para todos los Domingos</h3>
@@ -33,8 +33,8 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='../images/hero2.jpeg'
-            alt="First slide"
+            src='AlaTabla\src\images\hero3.jpeg'
+            alt="Third-slide"
           />
           <Carousel.Caption className='HeroCaption'>
             <h3 className='lasth3'>Descubrí el secreto de los grandes asadores con nuestra selección exclusiva.</h3>
