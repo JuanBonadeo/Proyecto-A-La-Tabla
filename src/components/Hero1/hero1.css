@@ -1,7 +1,7 @@
 .Hero1Container{
-    height: 90vh;
+    height: 80vh;
     width: 100%;
-    margin-top: 1.5em;
+    margin: 0 auto;
 }
 .HeroCaption{
     display: flex;
@@ -23,11 +23,10 @@
 .imgHero1{
     object-fit: contain;
     object-position: center;
-    height: max-content;
+    margin: 0 auto;
     width: 100%;
     filter:contrast(0.8);
     filter: brightness(0.8);
-    filter: opacity(0.6);
 }
 .lasth3{
     text-align: center;
@@ -44,7 +43,7 @@
 }
 @media (max-width: 1000px ){
     .Hero1Container{
-        height: 50vh
+        height: 35vh
     }
     .HeroCaption h3{
         font-size: 1.9em;
@@ -66,7 +65,8 @@
 }
 @media screen and (max-width: 550px) {
     .Hero1Container{
-        height: 30vh
+        height: 26vh
     }
     
 }
+

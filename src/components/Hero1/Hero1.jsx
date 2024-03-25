@@ -9,7 +9,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='hero1.jpg'
+            src='https://firebasestorage.googleapis.com/v0/b/alatabla-6a973.appspot.com/o/hero1.jpg?alt=media&token=3d2dd9b7-6b19-49c0-887b-8728ce668a66'
             alt="First-slide"
           />
           <Carousel.Caption className='HeroCaption '>
@@ -21,7 +21,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='hero2.jpeg'
+            src='https://firebasestorage.googleapis.com/v0/b/alatabla-6a973.appspot.com/o/hero2.jpeg?alt=media&token=ec065c3d-b043-47a1-8f49-bcbf5ee743f7'
             alt="Second-slide"
           />
           <Carousel.Caption className='HeroCaption'>
@@ -33,7 +33,7 @@ const Hero1 = () =>{
         <Carousel.Item className='Hero1Container'>
           <img
             className="imgHero1"
-            src='hero3.jpeg'
+            src='https://firebasestorage.googleapis.com/v0/b/alatabla-6a973.appspot.com/o/hero3.jpeg?alt=media&token=e4986f99-fa19-454c-b3ac-c02409d301d3'
             alt="Third-slide"
           />
           <Carousel.Caption className='HeroCaption'>
