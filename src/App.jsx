@@ -9,6 +9,7 @@ import { CartProvider } from './context/CartContext'
 import WspButton from './components/WspButton/WspButton'
 import { Contacto } from './components/Contacto/Contacto'
 import ProductsContainer from './components/ProductsContainer/ProductsContainer'
+import Admin from './components/admin/Admin'
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contacto" element={<Contacto/>}/>
           <Route path="/productos" element={<ProductsContainer/>}/>
           <Route path="/quienesSomos" element={<ProductsContainer/>}/>
+          <Route path="/admin123" element={<Admin/>}/>
         </Routes>  
       </div>
       <WspButton/>
